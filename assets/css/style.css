@@ -472,7 +472,7 @@ input, textarea, select, button{
 /* Footer */
 .main-footer{
     color: var(--neutral-white-100);
-    background-color: #212121;
+    background-color: var(--body-color);
     padding-top: 70px;
 }
 .footer-top{
@@ -481,17 +481,23 @@ input, textarea, select, button{
 .footer-bottom{
     padding: 25px 0;
 	border-top: 1px solid var(--neutral-grey-80);
-    background: rgba(0, 0, 0, 0.40);
+    background: #04000E;
+}
+.footer-logo{
+    margin-bottom: 30px;
+}
+.footer-logo img{
+    width: auto;
+    height: 100px;
 }
 .footer-socials{
     display: flex;
     gap: 10px;
-    padding-top: 30px;
 }
 .footer-socials a{
     display: flex;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
 }
 .footer-socials img,
 .footer-socials svg{
@@ -499,26 +505,15 @@ input, textarea, select, button{
     height: 100%;
     object-fit: contain;
     object-position: center center;
-    border-radius: 100px;
-    background-color: rgba(0, 0, 0, 0.40);
-}
-.footer-payments{
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-}
-.footer-payment-image img,
-.footer-payment-image svg{
-    width: auto;
-    height: 25px;
 }
 .footer-copyright p{
+    font-family: var(--bold-font);
     color: var(--gray-color);
     font-size: 14px;
 }
 .footer-details h4,
 .footer-navigation h4{
-    font-family: var(--second-font);
+    font-family: var(--bold-font);
     font-size: 18px;
     margin-bottom: 20px;
 }
@@ -535,7 +530,7 @@ input, textarea, select, button{
 }
 .footer-navigation ul li a{
     font-family: var(--primary-font);
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     color: var(--footer-color);
 }
@@ -543,11 +538,7 @@ input, textarea, select, button{
 .footer-navigation ul li a:focus{
     color: var(--neutral-white-100);
 }
-.footer-contact p{
-    font-family: var(--primary-font);
-    font-size: 14px;
-    color: var(--footer-color);
-}
+
 
 /* Swiper */
 .home-slider{
