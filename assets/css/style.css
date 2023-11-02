@@ -372,7 +372,7 @@ input, textarea, select, button{
 }
 
 .main-header{
-    position: fixed;
+    position: static;
     top: 0;
     width: 100%;
     z-index: 9;
@@ -566,8 +566,8 @@ input, textarea, select, button{
     background-color: #F4F3F3;
 }
 .slider-image{
+    position: relative;
     display: flex;
-    align-items: center;
     width: auto;
     height: 800px;
 }
@@ -577,6 +577,18 @@ input, textarea, select, button{
     height: 100%;
     border-radius: 50px;
     object-fit: cover;
+}
+.slider-content{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+.slider-content{
+    color: var(--neutral-white-100);
 }
 .swiper-pagination-bullet-active {
     background: var(--neutral-white-100);
@@ -591,8 +603,6 @@ input, textarea, select, button{
     filter: grayscale(80%);
     opacity: 0.8;
 }
-/* .swiper-slide-active{
-} */
 
 .swiper-button-prev {
     left: var(--swiper-navigation-sides-offset,150px);
@@ -608,7 +618,8 @@ input, textarea, select, button{
     padding: 40px;
     border-radius: 100px;
 }
-.swiper-button-next:after, .swiper-button-prev:after {
+.swiper-button-next:after, 
+.swiper-button-prev:after {
     font-size: 25px !important;
     color: var(--body-color);
 }
