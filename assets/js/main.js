@@ -5,10 +5,13 @@
 
         // Swipers
         const swiper = new Swiper('.swiper', {
-            slidesPerView: 'auto',
-            centeredSlides: true,
             spaceBetween: 30,
+            centeredSlides: true,
             loop: true,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: true,
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
