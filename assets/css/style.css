@@ -400,8 +400,7 @@ input, textarea, select, button{
 }
 .main-nav{
     display: flex;
-    justify-content: space-between;
-    margin: 20px 30px;
+    margin: 20px 50px;
     border-radius: 10px;
     background-color: var(--body-color);
 }
@@ -449,7 +448,7 @@ input, textarea, select, button{
 .nav-tools{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     padding-right: 70px;
     gap: 60px;
     width: 20%;
@@ -541,28 +540,34 @@ input, textarea, select, button{
     width: 100%;
     height: 800px;
 }
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F4F3F3;
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
 }
+
 .slider-image{
     position: relative;
     display: flex;
     width: auto;
-    height: 800px;
+    height: 100vh;
+}
+.slider-image:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
 }
 .slider-image img {
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: 50px;
     object-fit: cover;
 }
-.slider-caption{
+.slider-content{
     position: absolute;
     top: 50%;
     left: 0;
@@ -572,7 +577,7 @@ input, textarea, select, button{
     transform: translateY(-50%);
 }
 .slider-content{
-    margin-left: 100px;
+    padding: 0 300px;
     text-align: start;
     color: var(--neutral-white-100);
 }
@@ -591,6 +596,12 @@ input, textarea, select, button{
 }
 .swiper-pagination-bullet-active {
     background: var(--neutral-white-100);
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom,50px);
+    top: var(--swiper-pagination-top,auto);
+    left: 0;
+    width: 100%;
 }
 .swiper-button-prev:after, 
 .swiper-rtl .swiper-button-next:after {
@@ -623,6 +634,7 @@ input, textarea, select, button{
 /* Attraction Block */
 .attraction-block{
     position: relative;
+    margin: 0 50px;
 }
 .attraction-block .site-col-5:first-of-type{
     margin-right: 8.333333%;
@@ -686,6 +698,8 @@ input, textarea, select, button{
 /* Info Block */
 .info-block{
     position: relative;
+    margin: 0 50px;
+
 }
 .info-block .site-col-5:first-of-type{
     margin-right: 8.333333%;
@@ -752,6 +766,8 @@ input, textarea, select, button{
 /* Contact Block */
 .contact-block{
     position: relative;
+    margin: 0 50px;
+
 }
 .contact-block .site-row{
     justify-content: space-between;
@@ -775,6 +791,7 @@ input, textarea, select, button{
 }
 .contact-block-images{
     display: flex;
+    justify-content: center;
     gap: 30px;
 }
 .contact-block-image{
@@ -799,40 +816,28 @@ input, textarea, select, button{
 }
 
 /* VC */
-.vc_separator {
+.separator {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-}
-.vc_separator .vc_sep_holder {
-    height: 1px; 
-    position: relative;
-    flex: 1 1 auto;
-    min-width: 10%;
-}
-.vc_separator .vc_sep_holder .vc_sep_line {
-    height: 1px;
-    border-top: 1px solid rgba(0, 0, 0, 0.50);;
-    display: block;
-    position: relative;
-    top: 1px;
+}   
+.separator span {
     width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.50);;
 }
 
 /* Section */
-section{
+#despre{
     margin: 70px 0;
 }
-section:nth-child(4){
-    margin-bottom: 0;
+#site-heading{
+    margin: 70px 0 0;
 }
-section:nth-child(5),
-section:nth-child(6),
-section:nth-child(7){
-    margin: 120px 0;
+#respiro, #family, #colliseum{
+    margin: 70px 0;
 }
-section:nth-child(8){
+#contacte{
     background-color: var(--body-color);
     padding: 100px 0;
     margin: 0 0 30px 0;
